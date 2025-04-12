@@ -5,13 +5,14 @@ haar_cascade=cv.CascadeClassifier('haar_face.xml')
 
 # features=np.load('features.npy')
 # labels=np.load('labels.npy')
+haar_cascade = cv.CascadeClassifier('haar_cascade.xml')
 
 face_recognizer = cv.face.LBPHFaceRecognizer_create()
 face_recognizer.read('face_trained.yml')
 
 p=['Ben Afflek', 'Elton John', 'Jerry Seinfield', 'Madonna', 'Mindy Kaling']
 
-img=cv.imread(r'C:\Users\Lipika Pande\OneDrive\Desktop\New folder\opencv\photos\val\ben_afflek\1.jpg')
+img=cv.imread(r'C:\Users\Lipika Pande\OneDrive\Desktop\New folder\opencv\photos\val\ben_afflek\2.jpg')
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 cv.imshow('Person',gray)
